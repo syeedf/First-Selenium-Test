@@ -3,7 +3,7 @@ these test cover duckduckgo searches
 
 """
 
-def test_basic_duckduckgo_search():
+def test_basic_duckduckgo_search(browser):
 
     #Given the duckduckgo home page is displayed
     #TODO
