@@ -8,7 +8,7 @@ from selenium.webdriver.common.keys import Keys
 class DuckDuckGoSearchPage:
 
     url= 'https://www.duckduckgo.com'
-    search_input= (By.id, 'searchbox_input')
+    SEARCH_INPUT= (By.ID, 'searchbox_input')
     
     def __init__(self, browser):
         self.browser=browser
@@ -17,5 +17,5 @@ class DuckDuckGoSearchPage:
         self.browser.get(self.url)
         
     def search(self, phrase):
-        #TODO
-        pass
+        searchInput = self.browser.find_element(*self.SEARCH_INPUT)
+        searchInput.send_keys(phrase+ Keys.RETURN)

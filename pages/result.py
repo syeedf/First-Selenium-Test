@@ -4,8 +4,8 @@ from selenium.webdriver.common.by import By
 
 class DuckDuckGoResultPage: 
 
-    result_links = (By.CSS_SELECTOR,"[data-testid='result-title-a']")
-    search_input= (By.id, 'searchbox_input')
+    RESULT_LINKS = (By.CSS_SELECTOR,"[data-testid='result-title-a']")
+    SEARCH_INPUT= (By.ID, 'searchbox_input')
     def __init__(self, browser):
         self.browser = browser
     
