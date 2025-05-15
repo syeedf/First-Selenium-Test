@@ -7,15 +7,16 @@ from selenium.webdriver.common.keys import Keys
 
 class DuckDuckGoSearchPage:
 
-    url= 'https://www.duckduckgo.com'
+    URL = 'https://www.duckduckgo.com'
     SEARCH_INPUT= (By.ID, 'searchbox_input')
     
     def __init__(self, browser):
         self.browser=browser
     
     def load(self):
-        self.browser.get(self.url)
+        self.browser.get(self.URL)
         
     def search(self, phrase):
         searchInput = self.browser.find_element(*self.SEARCH_INPUT)
-        searchInput.send_keys(phrase+ Keys.RETURN)
+        searchInput.send_keys(phrase + Keys.RETURN)
+        print('searching for panda')

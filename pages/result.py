@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 
 class DuckDuckGoResultPage: 
 
-    RESULT_LINKS = (By.CSS_SELECTOR,"[data-testid='result-title-a']")
+    RESULT_LINKS = (By.CLASS_NAME,"EKtkFWMYpwzMKOYr0GYm LQVY1Jpkk8nyJ6HBWKAk")
     SEARCH_INPUT= (By.ID, 'searchbox_input')
 
     #Initializer 
