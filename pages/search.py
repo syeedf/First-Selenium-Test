@@ -4,6 +4,7 @@ This module contains DDGo Search Page, the page object for the ddgo seatch page
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+import time
 
 class DuckDuckGoSearchPage:
 
@@ -17,6 +18,10 @@ class DuckDuckGoSearchPage:
         self.browser.get(self.URL)
         
     def search(self, phrase):
+        time.sleep(2)
         searchInput = self.browser.find_element(*self.SEARCH_INPUT)
-        searchInput.send_keys(phrase + Keys.RETURN)
+        print('found the search box')
+        searchInput.send_keys(phrase+Keys.RETURN)
+        time.sleep(2)
+        
         print('searching for panda')

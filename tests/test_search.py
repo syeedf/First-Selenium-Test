@@ -26,5 +26,3 @@ def test_basic_duckduckgo_search(browser):
     for title in result_page.result_link_titles():
         assert phrase.lower() in title.lower()
 
-    #TODO : REMOVE THIS ONCE THE TEST IS COMPLETE 
-    raise Exception("Incomplete Test")

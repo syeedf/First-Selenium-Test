@@ -6,6 +6,7 @@ class DuckDuckGoResultPage:
 
     RESULT_LINKS = (By.CLASS_NAME,"EKtkFWMYpwzMKOYr0GYm LQVY1Jpkk8nyJ6HBWKAk")
     SEARCH_INPUT= (By.ID, 'searchbox_input')
+    RESULT_PAGE_INPUT= (By.ID, 'search_form_input')
 
     #Initializer 
 
@@ -20,7 +21,7 @@ class DuckDuckGoResultPage:
     
     
     def search_input_value(self):
-        search_input= self.browser.find_element(*self.SEARCH_INPUT)
+        search_input= self.browser.find_element(*self.RESULT_PAGE_INPUT)
         value= search_input.get_attribute('value')
         return value 
     
