@@ -14,7 +14,7 @@ def config(scope='session'):
         config= json.load(config_file)
 
     #assert values are acceptable 
-    assert config['browser'] in ['Firefox', 'Chrome', 'Headless Chrome']
+    assert config['browser'] in ['Firefox', 'Chrome', 'Headless Chrome', 'Safari']
     assert isinstance(config['implicit_wait'], int)
     assert config['implicit_wait'] > 0
     
@@ -35,6 +35,8 @@ def browser(config):
         opts=selenium.webdriver.ChromeOptions()
         opts.add_argument('headless')
         b=selenium.webdriver.Chrome(options=opts)
+    elif config['browser']=='Safari':
+        b=selenium.webdriver.Safari()
     else:
         raise Exception(f'Browser " {config["browser"]}" is not supported')
     #waits 10 sec for elements to appear
